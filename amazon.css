@@ -1,0 +1,239 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+}
+body{
+    background: #dadada;
+}
+a{
+  text-decoration: none;
+  color: inherit;   /*the property takes the value from the element's parent */
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #131921;
+  padding: 10px 20px;
+  color: #fff;
+}
+.country{
+  display: flex;
+  align-items: end;
+  margin-left: 15px;
+  font-size: 13px;
+  color: #c4c4c4;
+}
+.country h1{
+  color: #fff;
+  font-size: 14px;
+}
+.nav_search{
+   flex: 1; /*will use entire space available in row*/
+   display: flex;
+   align-items: center;
+   background: #fff;
+   color: grey;
+   max-width: 1000px;
+   border-radius: 4px;
+   margin-left: 15px;
+}
+.search_category{
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 5px;
+  background: #e5e5e5;
+  border-radius: 4px 0 0 4px;
+}
+.search_input{
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  width: 100%;
+}
+.search_icon{
+  max-width: 41px;
+  padding: 8px;
+  background: #ffd64f;
+  border-radius: 0 4px 4px 0;
+}
+.nav_lang{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-weight: 600;
+  margin-left: 16px;
+}
+.nav_text{
+  margin-left: 15px;
+
+}
+.nav_text p{
+  font-size: 10px;
+}
+.nav_text h1{
+  font-size: 14px;
+}
+.nav_cart{
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}
+
+/* below nav area to modify */
+.nav_bottom{
+  background: #232f3e;
+  color: #fff;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 20px;
+}
+.nav_bottom div{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+.header-slider ul{
+  display: flex;
+  overflow-y: hidden;  /*due to this the images stayed along x axis only and not along y causing a slinding effect */
+}
+.header-img{
+  max-width: 100%;
+  mask-image: linear-gradient(to bottom,#000000 50%, transparent 100%);
+  /*to make smooth transaction of colors*/
+
+}
+.header-slider a{
+  position: absolute;
+  top: 20%; /*position from top*/
+  z-index: 1;  /*the CSS property that controls the stacking order of overlapping elements on a page */
+  padding: 5vh 1vw;
+  background: #ffffff4f;
+  color: #0000007b;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+}
+.control_next{
+  right: 0; /*to remove overlapping of both icon the second icon shifted to right*/
+}
+
+/* for cards*/
+.box-row{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  justify-content: space-between;/*to placce each column equally*/
+  margin: 20px 30px;
+  
+}
+.box-col{
+  display: flex;
+  flex-direction: column; /* to arrange the h3, image and a one below other ==== comes under non wrap*/
+  gap: 10px;/* between h3 and img, img and a*/
+  padding: 15px 20px;/*kitna nadar hona chahiye content*/
+  background: #fff;
+  max-width: 24%;
+  min-height: 200px;
+  z-index: 1; /*overlapping*/
+}
+.box-col a{
+  font-size: 13px;
+  color: #009999;
+  font-weight: 500;
+}
+.header-box{
+  margin-top: -20vw; /*uske box ke upar gaya*/
+}
+
+/*slinding bar*/
+.product_slider{
+  background: #fff;
+  margin: 0 30px;
+  padding: 20px;
+  margin-bottom: 15px;
+
+}
+.product_slider .products{
+  display: flex;
+  overflow-x: auto;
+  margin-top: 10px;
+  gap: 20px;
+}
+.product_slider .products img{
+  max-width: 200px;
+  max-height: 200px;
+}
+.product_slider .products::-webkit-scrollbar{
+  display: none;
+}
+.product-slider-price{
+  background: #fff;
+  margin: 0 30px;
+  padding: 20px;
+  margin-bottom: 15px;
+
+}
+.product-slider-price .products{
+  display: flex;
+  overflow-x: auto;
+  /* overflow-y: hidden;  or the above both are same*/
+  gap: 10px;
+  margin-top: 10px;
+}
+.product-slider-price .products::-webkit-scrollbar{
+   display: none;  /*to hide scroll bar */
+}
+.product-cards{
+  display: flex;
+  flex-direction: column; /* arrange data and image in single column*/
+  justify-content: end;
+  min-width: 210px;
+  background: #fbfbfb;
+
+}
+.product-cards img{
+  width: 110px;
+  margin: 0 50px;
+}
+.product-offer p{
+  background: #be0b3b;
+  color: #fff;
+  display: inline-block; /* makes 27% and deal come side by side*/
+  padding: 2px 5px;
+  border-radius: 2px;
+  margin: 8px 0;
+  font-size: 13px;
+}
+.product-offer span{
+  color: #be0b3b;
+  font-weight: 500;
+  font-size: 12px;
+}
+.product-price {
+  color: gray;
+  font-size: 13px;
+}
+.product-cards h4{
+  color: #525252;
+  font-size: 15px;
+  font-weight: 400;
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background: #131921;
+  padding: 20px 60px;
+}
